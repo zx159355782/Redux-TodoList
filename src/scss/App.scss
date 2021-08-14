@@ -1,0 +1,141 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #e0c3fc, #8ec5fc);
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    #eea2a2 0%,
+    #bbc1bf 19%,
+    #57c6e1 42%,
+    #b49fda 79%,
+    #7ac5d8 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+
+.total {
+  width: 275px;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.uncomplete,
+p {
+  color: rgb(8, 138, 170);
+}
+
+.completed {
+  color: rgba(12, 12, 12, 0.295);
+  text-decoration: line-through;
+}
+
+.add {
+  margin-bottom: 20px;
+  &-input {
+    font-size: 15px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-right: none;
+    padding: 5px 12px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline-style: none;
+    color: rgb(102, 56, 230);
+
+    &::placeholder {
+      color: rgba(63, 42, 182, 0.432);
+    }
+  }
+
+  &-btn {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #fff;
+    background-color: #fff;
+    transform: translateX(-12px);
+    border-radius: 20px;
+    padding: 6px 12px;
+    line-height: 15px;
+    color: rgba(78, 23, 230, 0.63);
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgba(167, 167, 167, 0.39);
+      color: rgb(255, 255, 255);
+    }
+
+    &:active {
+      background-color: rgb(97, 164, 167);
+      color: #fff;
+    }
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: space-around;
+  transform: translateX(-6px);
+
+  & span {
+    cursor: pointer;
+    text-align: center;
+    flex: 0 0 25%;
+    font-weight: 600;
+  }
+
+  &-selected {
+    color: #387ec4;
+    text-shadow: 0 3px 2px #77777749;
+    transform: translateY(-2px);
+  }
+
+  &-unselecte {
+    color: #9b9b9b;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #282d33;
+      transform: translateY(-2px);
+      text-shadow: 0 3px 2px #77777749;
+    }
+  }
+}
+
+ul {
+  width: 100%;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 10px 0;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+.X {
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+}
